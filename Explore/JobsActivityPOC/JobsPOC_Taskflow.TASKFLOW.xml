@@ -1,0 +1,402 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>5Kymbduaa-gt-236417-2023-11-14T07:39:39.03Z::tf.xml</types1:EntryId>
+      <types1:Name>JobsPOC_Taskflow</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kaustubh.nimbalkar@perficient.com</types1:CreatedBy>
+      <types1:CreationDate>2023-11-14T07:39:39Z</types1:CreationDate>
+      <types1:ModifiedBy>kaustubh.nimbalkar@perficient.com</types1:ModifiedBy>
+      <types1:ModificationDate>2023-11-14T09:07:17Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>kaustubh.nimbalkar@perficient.com</types1:PublishedBy>
+      <types1:PublicationDate>2023-11-14T09:07:23Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.JobsPOC_Taskflow/JobsPOC_Taskflow.tf.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="JobsPOC_Taskflow"
+                   name="JobsPOC_Taskflow"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="JobsPOC_Task1" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:JobsPOC-Task1</option>
+                  </options>
+               </field>
+               <field description="" name="JobsPOC_Task2" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:JobsPOC-Task2</option>
+                  </options>
+               </field>
+               <field description="" name="JobsPOC_Task3" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:JobsPOC-Task3</option>
+                  </options>
+               </field>
+               <field description="" name="Data Task 4" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:JobsPOC-Task4</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowedUsers>
+                     <user>kaustubh.nimbalkar@perficient.com</user>
+                  </allowedUsers>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="j3wg4fhg" targetId="j3wg4fhf"/>
+               </start>
+               <container id="j3wg4fhf" type="parallel">
+                  <title>Parallel Paths 1</title>
+                  <flow id="j3wg4fhj">
+                     <eventContainer id="loy0syc9">
+                        <service id="j3wg4fhu">
+                           <title>JobsPOC_Task1</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">JobsPOC_Task1</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">eTnY3wEL0YrbHOOv4rAvMH</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="JobsPOC-Task1">temp.JobsPOC_Task1</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.JobsPOC_Task1/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.JobsPOC_Task1/fault"
+                                  id="loy0syc7"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.JobsPOC_Task1/fault"
+                                  id="loy0syc8"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="j3wg4fhk" targetId="j3wg4fhf" type="containerLink"/>
+                  </flow>
+                  <flow id="j3wg4fhm">
+                     <eventContainer id="loy0sydh">
+                        <service id="j3wg4fi4">
+                           <title>JobsPOC_Task2</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">JobsPOC_Task2</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">lmifJLrA6eafzOpaWn37cr</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="JobsPOC-Task2">temp.JobsPOC_Task2</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.JobsPOC_Task2/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.JobsPOC_Task2/fault"
+                                  id="loy0sydf"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.JobsPOC_Task2/fault"
+                                  id="loy0sydg"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="j3wg4fhn" targetId="j3wg4fhf" type="containerLink"/>
+                  </flow>
+                  <flow id="loy0sybd">
+                     <eventContainer id="loy0syex">
+                        <service id="loy0sye7">
+                           <title>JobsPOC_Task3</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">JobsPOC_Task3</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">9BXfqlhTJFXhULpxKzy4kA</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="JobsPOC-Task3">temp.JobsPOC_Task3</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.JobsPOC_Task3/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.JobsPOC_Task3/fault"
+                                  id="loy0syev"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.JobsPOC_Task3/fault"
+                                  id="loy0syew"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="loy0sybe" targetId="j3wg4fhf" type="containerLink"/>
+                  </flow>
+                  <flow id="loy0sybj">
+                     <eventContainer id="loy0sygc">
+                        <service id="loy0syfm">
+                           <title>Data Task 4</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">JobsPOC_Task4</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">dydtjkNbn6OeaEnjYiq70q</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="JobsPOC-Task4">temp.Data Task 4</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Data Task 4/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Data Task 4/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Data Task 4/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Data Task 4/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Data Task 4/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Data Task 4/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Data Task 4/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Data Task 4/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Data Task 4/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Data Task 4/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Data Task 4/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Data Task 4/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.Data Task 4/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.Data Task 4/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Data Task 4/fault"
+                                  id="loy0syga"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Data Task 4/fault"
+                                  id="loy0sygb"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="loy0sybk" targetId="j3wg4fhf" type="containerLink"/>
+                  </flow>
+                  <link id="j3wg4fhi" targetId="j3wg4fhj" type="containerLink"/>
+                  <link id="j3wg4fhl" targetId="j3wg4fhm" type="containerLink"/>
+                  <link id="loy0sybc" targetId="loy0sybd" type="containerLink"/>
+                  <link id="loy0sybi" targetId="loy0sybj" type="containerLink"/>
+                  <link id="j3wg4fhh" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="JobsPOC-Task1"
+                              isByCopy="true"
+                              name="JobsPOC-Task1">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="JobsPOC-Task2"
+                              isByCopy="true"
+                              name="JobsPOC-Task2">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="JobsPOC-Task3"
+                              isByCopy="true"
+                              name="JobsPOC-Task3">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="JobsPOC-Task4"
+                              isByCopy="true"
+                              name="JobsPOC-Task4">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>3iNvbVQu5ZNbHUVcMk3RqL</types1:GUID>
+      <types1:DisplayName>JobsPOC_Taskflow</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-11-20T16:50:36.359Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

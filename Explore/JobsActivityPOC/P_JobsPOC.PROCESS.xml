@@ -1,0 +1,176 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>n9yCEx9dwMbgbdo-gt-5967841-2023-11-14T12:02:40.223Z::pd.xml</types1:EntryId>
+      <types1:Name>P_JobsPOC</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kaustubh.nimbalkar@perficient.com</types1:CreatedBy>
+      <types1:CreationDate>2023-11-14T12:02:40Z</types1:CreationDate>
+      <types1:ModifiedBy>kaustubh.nimbalkar@perficient.com</types1:ModifiedBy>
+      <types1:ModificationDate>2023-11-16T10:01:33Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>kaustubh.nimbalkar@perficient.com</types1:PublishedBy>
+      <types1:PublicationDate>2023-11-16T10:01:42Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.P_JobsPOC/P_JobsPOC.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="P_JobsPOC"
+                  name="P_JobsPOC"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="temp_Status" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="temp_head" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="temp_VXML" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="temp_tail" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="temp_CompletedData" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="temp_results" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="temp_FW" type="reference">
+                  <options>
+                     <option name="referenceTo">FileWritter-2:FileWriteTask</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">9UV3CovFIvVfmPJwSoTJ8t</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="loya7ubt" targetId="loya7ubs"/>
+               </start>
+               <service id="loya7ubs">
+                  <title>GetRunID</title>
+                  <serviceName>AC-TaskFlow:GetTaskFlow</serviceName>
+                  <serviceGUID>3225Wl1k9fGgbS7RhGqNQ0</serviceGUID>
+                  <serviceInput/>
+                  <link id="lozdza4z" targetId="lozdza4y"/>
+               </service>
+               <service id="loya7uc3">
+                  <title>Monitor</title>
+                  <serviceName>AC-TaskFlow:Monitor</serviceName>
+                  <serviceGUID>3225Wl1k9fGgbS7RhGqNQ0</serviceGUID>
+                  <serviceInput>
+                     <parameter name="RunId" source="field" updatable="true">output.O_RunId</parameter>
+                  </serviceInput>
+                  <link id="lozmveei" targetId="lozdza58"/>
+               </service>
+               <service id="lozole4j">
+                  <title>FileWriter</title>
+                  <serviceName>FileWritter-2:FileWriter</serviceName>
+                  <serviceGUID>9UV3CovFIvVfmPJwSoTJ8t</serviceGUID>
+                  <serviceInput>
+                     <parameter name="fileWriteTask" source="field" updatable="true">temp.temp_FW</parameter>
+                  </serviceInput>
+                  <link id="lp0x8ive" targetId="lp0x8ivd"/>
+               </service>
+               <wait id="lozdza4y">
+                  <title>Wait 1</title>
+                  <duration source="formula">
+                     <function name="duration_expression">
+                        <arg name="value">2</arg>
+                        <arg name="scale">M</arg>
+                        <arg name="businessDays"/>
+                     </function>
+                  </duration>
+                  <link id="lozdza50" targetId="loya7uc3"/>
+               </wait>
+               <assignment id="lozdza58">
+                  <title>Assignment to temp_VXML</title>
+                  <operation source="constant" to="temp.temp_VXML">&lt;root&gt;{$output.Monitor}&lt;/root&gt;</operation>
+                  <link id="lozdza5a" targetId="loya7ucr"/>
+               </assignment>
+               <assignment id="loya7ucr">
+                  <title>Assignment to temp_Status</title>
+                  <operation source="formula" to="temp.temp_Status">
+                     <expression language="XQuery">let $parsedXml := util:parseXML($temp.temp_VXML   )
+return
+for $x at $j in $parsedXml/result
+return 
+element {fn:concat('_',$j)} {
+element assetName { $x/assetName/text()},
+element status { $x/status/text()}
+}</expression>
+                  </operation>
+                  <link id="lp0wiv8x" targetId="lp0wiv8w"/>
+               </assignment>
+               <assignment id="lp0wiv8w">
+                  <title>Assignment to temp_head, temp_tail</title>
+                  <operation source="formula" to="temp.temp_head">
+                     <expression language="XQuery">list:head($temp.temp_Status )</expression>
+                  </operation>
+                  <operation source="formula" to="temp.temp_tail">
+                     <expression language="XQuery">list:tail($temp.temp_tail )</expression>
+                  </operation>
+                  <link id="lp0wiv8y" targetId="lozole4w"/>
+               </assignment>
+               <assignment id="lozole4w">
+                  <title>Assignment to File name, Plain File Content</title>
+                  <operation source="constant" to="temp.temp_FW[1]/fileName">JobsStatus</operation>
+                  <operation source="field" to="temp.temp_FW[1]/content">temp.temp_Status</operation>
+                  <link id="lozole4y" targetId="lozole4j"/>
+               </assignment>
+               <end id="lp0x8ivd">
+                  <title>End 1</title>
+               </end>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>68cca7fe-3a73-45f9-a354-de534dcfec7d</ns1:Id>
+               <ns1:Name>Input</ns1:Name>
+               <ns1:CreatedBy>kaustubh.nimbalkar@perficient.com</ns1:CreatedBy>
+               <ns1:CreationDate>2023-11-14T12:11:42Z</ns1:CreationDate>
+               <ns1:ModifiedBy>kaustubh.nimbalkar@perficient.com</ns1:ModifiedBy>
+               <ns1:ModificationDate>2023-11-14T12:11:42Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>9qOekP8bqETjoNMMZmSKUJ</types1:GUID>
+      <types1:DisplayName>P_JobsPOC</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-11-20T16:50:34.323Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

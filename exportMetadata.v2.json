@@ -1,0 +1,394 @@
+{
+  "name" : "JobsActivityPOC-1700499022353",
+  "sourceOrgId" : "6KfRM795fRWlpfbYXunQid",
+  "sourceOrgName" : "Perficient India Pvt Ltd",
+  "exportedObjects" : [ {
+    "objectGuid" : "3225Wl1k9fGgbS7RhGqNQ0",
+    "objectName" : "AC-TaskFlow",
+    "objectType" : "AI_CONNECTION",
+    "path" : "/Explore/JobsActivityPOC",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "y07duD2L5SeE1Ko-gt-5942692-2023-11-14T09:13:38.387Z::conn.xml"
+      },
+      "objectRefs" : [ "kcU7SwO8xq7hE4TQ5bmDch" ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "9qOekP8bqETjoNMMZmSKUJ",
+    "objectName" : "P_JobsPOC",
+    "objectType" : "PROCESS",
+    "path" : "/Explore/JobsActivityPOC",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "n9yCEx9dwMbgbdo-gt-5967841-2023-11-14T12:02:40.223Z::pd.xml"
+      },
+      "objectRefs" : [ "3225Wl1k9fGgbS7RhGqNQ0", "9UV3CovFIvVfmPJwSoTJ8t" ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "lmifJLrA6eafzOpaWn37cr",
+    "objectName" : "JobsPOC_Task2",
+    "objectType" : "MTT",
+    "path" : "/Explore/JobsActivityPOC",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CO2Z0Z00000000000G"
+      },
+      "objectRefs" : [ "7AdFR361d0eklPdz0SMeAb", "igxwH3T7uS1c87YugscxS8", "dVNkoQOHjWpkYUJZxU7bwL", "bg3vRDJl4KFerEK8HrYnUK" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "56ys0QnsuIwj8AFKELlBws",
+    "objectName" : "JobsPOC_Mapping4",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/JobsActivityPOC",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CO2Z17000000000016"
+      },
+      "objectRefs" : [ "igxwH3T7uS1c87YugscxS8", "bg3vRDJl4KFerEK8HrYnUK" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "3iNvbVQu5ZNbHUVcMk3RqL",
+    "objectName" : "JobsPOC_Taskflow",
+    "objectType" : "TASKFLOW",
+    "path" : "/Explore/JobsActivityPOC",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "5Kymbduaa-gt-236417-2023-11-14T07:39:39.03Z::tf.xml"
+      },
+      "objectRefs" : [ "dydtjkNbn6OeaEnjYiq70q", "lmifJLrA6eafzOpaWn37cr", "eTnY3wEL0YrbHOOv4rAvMH", "9BXfqlhTJFXhULpxKzy4kA" ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "9BXfqlhTJFXhULpxKzy4kA",
+    "objectName" : "JobsPOC_Task3",
+    "objectType" : "MTT",
+    "path" : "/Explore/JobsActivityPOC",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CO2Z0Z00000000000I"
+      },
+      "objectRefs" : [ "7AdFR361d0eklPdz0SMeAb", "igxwH3T7uS1c87YugscxS8", "bg3vRDJl4KFerEK8HrYnUK", "3h5Cjjtn86ye0i40AmxCWv" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "3h5Cjjtn86ye0i40AmxCWv",
+    "objectName" : "Jobs POC_Mapping3",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/JobsActivityPOC",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CO2Z17000000000015"
+      },
+      "objectRefs" : [ "igxwH3T7uS1c87YugscxS8", "bg3vRDJl4KFerEK8HrYnUK" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "dydtjkNbn6OeaEnjYiq70q",
+    "objectName" : "JobsPOC_Task4",
+    "objectType" : "MTT",
+    "path" : "/Explore/JobsActivityPOC",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CO2Z0Z00000000000K"
+      },
+      "objectRefs" : [ "7AdFR361d0eklPdz0SMeAb", "igxwH3T7uS1c87YugscxS8", "56ys0QnsuIwj8AFKELlBws", "bg3vRDJl4KFerEK8HrYnUK" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "7AdFR361d0eklPdz0SMeAb",
+    "objectName" : "ZIL882",
+    "objectType" : "AgentGroup",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CO2Z25000000000002"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "cbN6QBwDtopkAdFTdVwXsf",
+    "objectName" : "JobsActivityPOC",
+    "objectType" : "Project",
+    "path" : "/Explore",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "igxwH3T7uS1c87YugscxS8",
+    "objectName" : "jdbc_connection",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CO2Z0B000000000003"
+      },
+      "objectRefs" : [ "7AdFR361d0eklPdz0SMeAb" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "eTnY3wEL0YrbHOOv4rAvMH",
+    "objectName" : "JobsPOC_Task1",
+    "objectType" : "MTT",
+    "path" : "/Explore/JobsActivityPOC",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CO2Z0Z00000000000E"
+      },
+      "objectRefs" : [ "7AdFR361d0eklPdz0SMeAb", "igxwH3T7uS1c87YugscxS8", "bg3vRDJl4KFerEK8HrYnUK", "aN8zIwrQxd4hsfOoq4U06n" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "9UV3CovFIvVfmPJwSoTJ8t",
+    "objectName" : "FileWritter",
+    "objectType" : "AI_CONNECTION",
+    "path" : "/Explore/JobsActivityPOC",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "uBxiggor3rp3yD7-gt-6381103-2023-11-15T10:49:15.338Z::conn.xml"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "dVNkoQOHjWpkYUJZxU7bwL",
+    "objectName" : "JobsPOC_Mapping2",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/JobsActivityPOC",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CO2Z17000000000014"
+      },
+      "objectRefs" : [ "igxwH3T7uS1c87YugscxS8", "bg3vRDJl4KFerEK8HrYnUK" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "bg3vRDJl4KFerEK8HrYnUK",
+    "objectName" : "snowflake_conn",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CO2Z0B000000000002"
+      },
+      "objectRefs" : [ "7AdFR361d0eklPdz0SMeAb" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "aN8zIwrQxd4hsfOoq4U06n",
+    "objectName" : "JobsPOC_Mapping1",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/JobsActivityPOC",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CO2Z17000000000013"
+      },
+      "objectRefs" : [ "igxwH3T7uS1c87YugscxS8", "bg3vRDJl4KFerEK8HrYnUK" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "kcU7SwO8xq7hE4TQ5bmDch",
+    "objectName" : "SC_TaskFlow",
+    "objectType" : "AI_SERVICE_CONNECTOR",
+    "path" : "/Explore/JobsActivityPOC",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "nEbcjw4ARW8UBM7-gt-5942175-2023-11-14T09:09:21.19Z::svc.xml"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  } ]
+}

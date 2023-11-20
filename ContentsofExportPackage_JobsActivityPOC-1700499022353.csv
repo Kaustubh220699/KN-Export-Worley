@@ -1,0 +1,18 @@
+objectPath,objectName,objectType,id
+/Explore/JobsActivityPOC,AC-TaskFlow,AI_CONNECTION,3225Wl1k9fGgbS7RhGqNQ0
+/Explore/JobsActivityPOC,P_JobsPOC,PROCESS,9qOekP8bqETjoNMMZmSKUJ
+/Explore/JobsActivityPOC,JobsPOC_Task2,MTT,lmifJLrA6eafzOpaWn37cr
+/Explore/JobsActivityPOC,JobsPOC_Mapping4,DTEMPLATE,56ys0QnsuIwj8AFKELlBws
+/Explore/JobsActivityPOC,JobsPOC_Taskflow,TASKFLOW,3iNvbVQu5ZNbHUVcMk3RqL
+/Explore/JobsActivityPOC,JobsPOC_Task3,MTT,9BXfqlhTJFXhULpxKzy4kA
+/Explore/JobsActivityPOC,Jobs POC_Mapping3,DTEMPLATE,3h5Cjjtn86ye0i40AmxCWv
+/Explore/JobsActivityPOC,JobsPOC_Task4,MTT,dydtjkNbn6OeaEnjYiq70q
+/SYS,ZIL882,AgentGroup,7AdFR361d0eklPdz0SMeAb
+/Explore,JobsActivityPOC,Project,cbN6QBwDtopkAdFTdVwXsf
+/SYS,jdbc_connection,Connection,igxwH3T7uS1c87YugscxS8
+/Explore/JobsActivityPOC,JobsPOC_Task1,MTT,eTnY3wEL0YrbHOOv4rAvMH
+/Explore/JobsActivityPOC,FileWritter,AI_CONNECTION,9UV3CovFIvVfmPJwSoTJ8t
+/Explore/JobsActivityPOC,JobsPOC_Mapping2,DTEMPLATE,dVNkoQOHjWpkYUJZxU7bwL
+/SYS,snowflake_conn,Connection,bg3vRDJl4KFerEK8HrYnUK
+/Explore/JobsActivityPOC,JobsPOC_Mapping1,DTEMPLATE,aN8zIwrQxd4hsfOoq4U06n
+/Explore/JobsActivityPOC,SC_TaskFlow,AI_SERVICE_CONNECTOR,kcU7SwO8xq7hE4TQ5bmDch

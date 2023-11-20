@@ -1,0 +1,124 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>nEbcjw4ARW8UBM7-gt-5942175-2023-11-14T09:09:21.19Z::svc.xml</types1:EntryId>
+      <types1:Name>SC_TaskFlow</types1:Name>
+      <types1:ParentFlowIds>y07duD2L5SeE1Ko-gt-5942692-2023-11-14T09:13:38.387Z::conn.xml,ykZ2sBsoZduD2L5-gt-6566377-2023-11-16T07:16:08.402Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kaustubh.nimbalkar@perficient.com</types1:CreatedBy>
+      <types1:CreationDate>2023-11-14T09:09:21Z</types1:CreationDate>
+      <types1:ModifiedBy>kaustubh.nimbalkar@perficient.com</types1:ModifiedBy>
+      <types1:ModificationDate>2023-11-15T07:22:04Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>kaustubh.nimbalkar@perficient.com</types1:PublishedBy>
+      <types1:PublicationDate>2023-11-14T12:04:48Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/SC_TaskFlow/SC_TaskFlow_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="SC_TaskFlow"
+                            label=""
+                            name="SC_TaskFlow"
+                            uuid="ba5df5cc-f6d1-4a99-8c1f-52b862e40da8">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description=""
+                                    label="URL"
+                                    masked="false"
+                                    name="URL"
+                                    required="true"
+                                    testWith="https://usw5.dm-us.informaticacloud.com"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category="GET"
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetTaskFlow"
+                       maxRedirects="100"
+                       name="GetTaskFlow"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://usw5.dm-us.informaticacloud.com/active-bpel/rt/JobsPOC_Taskflow"
+                                        verb="GET">
+                        <authentication>
+                           <username>kaustubh.nimbalkar@perficient.com</username>
+                           <password/>
+                           <isExpressionInPassword>false</isExpressionInPassword>
+                        </authentication>
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="O_RunId" property="RunId" type="string"/>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="Monitor"
+                       maxRedirects="100"
+                       name="Monitor"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter description=""
+                                label=""
+                                name="RunId"
+                                nogen="true"
+                                required="true"
+                                testWith="909062798264422400"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{$URL}/active-bpel/services/tf/status/{$RunId}"
+                                        verb="GET">
+                        <authentication>
+                           <username>kaustubh.nimbalkar@perficient.com</username>
+                           <password/>
+                           <isExpressionInPassword>false</isExpressionInPassword>
+                        </authentication>
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="Monitor" type="string">
+                        <xquery>{for $task in /root/subtaskDetails/details/tasks
+return
+&lt;result&gt; 
+  &lt;assetName&gt;{data($task/assetName)}&lt;/assetName&gt;
+  &lt;status&gt;{data($task/status)}&lt;/status&gt;   
+&lt;/result&gt;}</xquery>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>kcU7SwO8xq7hE4TQ5bmDch</types1:GUID>
+      <types1:DisplayName>SC_TaskFlow</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-11-20T16:50:34.126Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

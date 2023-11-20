@@ -1,0 +1,51 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>y07duD2L5SeE1Ko-gt-5942692-2023-11-14T09:13:38.387Z::conn.xml</types1:EntryId>
+      <types1:Name>AC-TaskFlow</types1:Name>
+      <types1:ParentFlowIds>n9yCEx9dwMbgbdo-gt-5967841-2023-11-14T12:02:40.223Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:ZIL882</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kaustubh.nimbalkar@perficient.com</types1:CreatedBy>
+      <types1:CreationDate>2023-11-14T09:13:38Z</types1:CreationDate>
+      <types1:ModifiedBy>kaustubh.nimbalkar@perficient.com</types1:ModifiedBy>
+      <types1:ModificationDate>2023-11-14T09:52:02Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>kaustubh.nimbalkar@perficient.com</types1:PublishedBy>
+      <types1:PublicationDate>2023-11-14T12:05:07Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/AC-TaskFlow/AC-TaskFlow.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="AC-TaskFlow"
+                     label="AC-TaskFlow"
+                     name="AC-TaskFlow">
+            <description/>
+            <tags>.agent:ZIL882</tags>
+            <agent>ZIL882</agent>
+            <attributes>
+               <attribute encrypted="false"
+                          name="URL"
+                          value="https://usw5.dm-us.informaticacloud.com"/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/SC_TaskFlow/SC_TaskFlow_svcDef.xml"
+                               guid="kcU7SwO8xq7hE4TQ5bmDch"
+                               name="SC_TaskFlow"
+                               supportsConnectionTest="false"
+                               uuid="ba5df5cc-f6d1-4a99-8c1f-52b862e40da8">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>3225Wl1k9fGgbS7RhGqNQ0</types1:GUID>
+      <types1:DisplayName>AC-TaskFlow</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-11-20T16:50:34.186Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
